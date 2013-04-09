@@ -13,7 +13,7 @@ And then add this to your prefered spot under `segments`:
 
     {
         "module": "powerlinex.segment.plenv",
-            "name": "version"
+        "name": "version"
     },
 
 Whenever you are in a folder with a non-default perl version specified, it will
