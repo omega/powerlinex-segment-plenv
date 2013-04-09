@@ -11,10 +11,16 @@ def readlines(cmd, cwd):
             yield line[:-1].decode('utf-8')
 
 
-def version(pl):
-    for line in readlines(["plenv", "version"], os.getcwd()):
-        # Now to process line
-        if line[-9:-1] == "/version":
-            return None
+def virtualenv(pl):
+    try:
+        for line in readlines(["plenv", "version"], os.getcwd()):
+            # Now to process line
+            if line[-9:-1] == "/version":
+                return None
+            else:
+                return line.split(" ")[0]
+    except OSError as e:
+        if e.errno == 2:
+            pass
         else:
-            return line.split(" ")[0]
+            raise
