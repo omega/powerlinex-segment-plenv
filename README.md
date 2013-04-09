@@ -9,7 +9,7 @@ First install the addon:
 
 If you make a theme, you can include a custom `segment_data`:
 
-    "virtualenv": {
+    "version": {
         "before": "ⓔ  "
     },
 
@@ -17,10 +17,12 @@ And then add this to your prefered spot under `segments`:
 
     {
         "module": "powerlinex.segment.plenv",
-        "name": "virtualenv"
+        "name": "version"
     },
 
 Whenever you are in a folder with a non-default perl version specified, it will
 add a segment showing the perl version name.
 
-We reuse the `virtualenv` name to make the themes etc standard.
+The `highlight_group` of the segment returned is `perl_version`, `virtualenv`,
+in that order. This will be highlighted in the same way as `virtualenv`, unless
+you specify something else in the `perl_version` color.
