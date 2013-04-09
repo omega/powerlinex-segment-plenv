@@ -3,6 +3,10 @@
 An attempt at a proof of concept powerline custom segment, to try to figure out
 the propper way of writing those. This adds a segment with a virtualenv method.
 
+First install the addon:
+
+    pip install -U --user git+https://github.com/omega/powerlinex-segment-plenv.git
+
 If you make a theme, you can include a custom `segment_data`:
 
     "virtualenv": {
