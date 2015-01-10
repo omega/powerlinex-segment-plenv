@@ -21,7 +21,7 @@ def version(pl, segment_info):
             else:
                 return [{
                     'contents': line.split(" ")[0],
-                    'highlight_group': ['perl_version', 'virtualenv']
+                    'highlight_groups': ['perl_version', 'virtualenv']
                 }]
     except OSError as e:
         if e.errno == 2:
